@@ -2,20 +2,60 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EVENTS = {
+  "2026-01-28": [
+    { title: "Targi Rétromobile – dzień 1", link: "https://www.facebook.com/RetromobileOfficiel" },
+  ],
+  "2026-01-29": [
+    { title: "Targi Rétromobile – dzień 2", link: "https://www.facebook.com/RetromobileOfficiel" },
+  ],
+  "2026-01-30": [
+    { title: "The Ice – dzień 1", link: "https://www.facebook.com/theicestmoritz" },
+    { title: "Targi Rétromobile – dzień 3", link: "https://www.facebook.com/RetromobileOfficiel" },
+    { title: "Bremen Classic Motorshow – dzień 1", link: "https://classicmotorshow.de/" },
+  ],
+  "2026-01-31": [
+    { title: "The Ice – dzień 2", link: "https://www.facebook.com/theicestmoritz" },
+    { title: "Targi Rétromobile – dzień 4", link: "https://www.facebook.com/RetromobileOfficiel" },
+    { title: "F.A.T. Ice Race Zell am See", link: "https://fat-international.com/pages/ice-race-2026" },
+    { title: "Bremen Classic Motorshow – dzień 2", link: "https://classicmotorshow.de/" },
+  ],
+  "2026-02-01": [
+    { title: "Targi Rétromobile – dzień 5", link: "https://www.facebook.com/RetromobileOfficiel" },
+    { title: "Bremen Classic Motorshow – dzień 3", link: "https://classicmotorshow.de/" },
+  ],
+  "2026-02-19": [
+    { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 1", link: "https://www.retro-classics.de/" },
+  ],
+  "2026-02-20": [
+    { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 2", link: "https://www.retro-classics.de/" },
+  ],
   "2026-02-21": [
     { title: "KUSTOMHEAD 2026", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
+    { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 3", link: "https://www.retro-classics.de/" },
   ],
   "2026-02-22": [
     { title: "KUSTOMHEAD 2026", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
+    { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 4", link: "https://www.retro-classics.de/" },
+  ],
+  "2026-03-07": [
+    { title: "Auto Moto Retro PARMA", link: "https://automotoretro.it/" },
   ],
   "2026-03-08": [
     { title: "Kobieta za kółkiem VII", link: "https://facebook.com/events/s/kobieta-za-ko%C5%82kiem-vii-edycja/847104654407052/" },
   ],
+  "2026-03-12": [
+    { title: "Coppa delle Alpi – dzień 1", link: "https://1000miglia.it/en/events/coppa-delle-alpi/" },
+  ],
+  "2026-03-13": [
+    { title: "Coppa delle Alpi – dzień 2", link: "https://1000miglia.it/en/events/coppa-delle-alpi/" },
+  ],
   "2026-03-14": [
     { title: "XIV Targi Motocyklowe Wrocław Motorcycle Show 2026 – dzień 1", link: "https://facebook.com/events/s/xiv-targi-motocyklowe-wroc%C5%82aw-/2461003907589563/" },
+    { title: "Coppa delle Alpi – dzień 3", link: "https://1000miglia.it/en/events/coppa-delle-alpi/" },
   ],
   "2026-03-15": [
     { title: "XIV Targi Motocyklowe Wrocław Motorcycle Show 2026 – dzień 2", link: "https://facebook.com/events/s/xiv-targi-motocyklowe-wroc%C5%82aw-/2461003907589563/" },
+    { title: "Coppa delle Alpi – dzień 4", link: "https://1000miglia.it/en/events/coppa-delle-alpi/" },
   ],
   "2026-03-29": [
     { title: "Początek Sezonu C. S. Klasyków 2026", link: "https://facebook.com/events/s/poczatek-sezonu-cs-klasykow-20/1138154187974698/" },
@@ -24,22 +64,37 @@ const EVENTS = {
     { title: "I runda Via Classic Cup", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "II Meeting Modelarski Pojazdów Cywilnych + Zlot Klasyków", link: "https://facebook.com/events/s/ii-meeting-modelarski-pojazdow/1464702117913664/" },
   ],
+  "2026-04-16": [
+    { title: "Anantara Concorso Roma – dzień 1", link: "https://www.facebook.com/AnantaraConcorsoRoma" },
+  ],
+  "2026-04-17": [
+    { title: "Anantara Concorso Roma – dzień 2", link: "https://www.facebook.com/AnantaraConcorsoRoma" },
+  ],
   "2026-04-18": [
     { title: "Zlot klasycznej motoryzacji - start sezonu", link: "https://www.facebook.com/events/1725509802183080/" },
     { title: "Motor Vintage Bazar - edycja letnia", link: "https://facebook.com/events/s/motor-vintage-bazar-edycja-let/798296532590367/" },
+    { title: "Anantara Concorso Roma – dzień 3", link: "https://www.facebook.com/AnantaraConcorsoRoma" },
+  ],
+  "2026-04-19": [
+    { title: "Anantara Concorso Roma – dzień 4", link: "https://www.facebook.com/AnantaraConcorsoRoma" },
   ],
   "2026-04-23": [
     { title: "Poznań Motor Show – dzień 1", link: "https://www.facebook.com/PoznanMotorShow/" },
   ],
   "2026-04-24": [
     { title: "Poznań Motor Show – dzień 2", link: "https://www.facebook.com/PoznanMotorShow/" },
+    { title: "Grand Prix de Monaco Historique – dzień 1", link: "https://www.monacograndprixhistoric.com/" },
   ],
   "2026-04-25": [
     { title: "Poznań Motor Show – dzień 3", link: "https://www.facebook.com/PoznanMotorShow/" },
     { title: "VII Zlot Klasyków Rozruch", link: "https://www.facebook.com/events/1113615016565120/" },
+    { title: "Grand Prix de Monaco Historique – dzień 2", link: "https://www.monacograndprixhistoric.com/" },
+    { title: "AUTOPIA – dzień 1", link: "https://autopia.events/" },
   ],
   "2026-04-26": [
     { title: "Poznań Motor Show – dzień 4", link: "https://www.facebook.com/PoznanMotorShow/" },
+    { title: "Grand Prix de Monaco Historique – dzień 3", link: "https://www.monacograndprixhistoric.com/" },
+    { title: "AUTOPIA – dzień 2", link: "https://autopia.events/" },
   ],
   "2026-05-01": [
     { title: "RETRO RAJD 2", link: "https://facebook.com/events/s/retro-rajd-2/1261082769376854/" },
@@ -96,21 +151,41 @@ const EVENTS = {
   "2026-06-01": [
     { title: "International Mini Meeting – dzień 5", link: "https://imm2026.pl/" },
   ],
+  "2026-06-04": [
+    { title: "10 edycja Charytatywnego Rajdu Koguta – dzień 1", link: "https://rajdkoguta.com.pl/" },
+  ],
+  "2026-06-05": [
+    { title: "10 edycja Charytatywnego Rajdu Koguta – dzień 2", link: "https://rajdkoguta.com.pl/" },
+  ],
+  "2026-06-06": [
+    { title: "10 edycja Charytatywnego Rajdu Koguta – dzień 3", link: "https://rajdkoguta.com.pl/" },
+  ],
+  "2026-06-09": [
+    { title: "Mille Miglia – dzień 1", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
+  ],
   "2026-06-10": [
     { title: "VIA PRESTIGE – dzień 1", link: "https://www.facebook.com/ViaPrestigeEurope/" },
+    { title: "Mille Miglia – dzień 2", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
+    { title: "1000 mil československých – dzień 1", link: "https://1000milceskoslovenskych.cz/" },
   ],
   "2026-06-11": [
     { title: "VIA PRESTIGE – dzień 2", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "Classica Mierzęcin – dzień 1", link: "https://www.facebook.com/share/1BgXCrttuc/" },
+    { title: "Mille Miglia – dzień 3", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
+    { title: "1000 mil československých – dzień 2", link: "https://1000milceskoslovenskych.cz/" },
   ],
   "2026-06-12": [
     { title: "VIA PRESTIGE – dzień 3", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "Classica Mierzęcin – dzień 2", link: "https://www.facebook.com/share/1BgXCrttuc/" },
     { title: "ZLOT DODGE RAM POLAND 6 edycja", link: "https://facebook.com/events/s/zlot-dodge-ram-poland-edycja-6/1216861129652928/" },
+    { title: "Mille Miglia – dzień 4", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
+    { title: "1000 mil československých – dzień 3", link: "https://1000milceskoslovenskych.cz/" },
   ],
   "2026-06-13": [
     { title: "VIA PRESTIGE – dzień 4", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "Classica Mierzęcin – dzień 3", link: "https://www.facebook.com/share/1BgXCrttuc/" },
+    { title: "Mille Miglia – dzień 5", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
+    { title: "1000 mil československých – dzień 4", link: "https://1000milceskoslovenskych.cz/" },
   ],
   "2026-06-14": [
     { title: "Classica Mierzęcin – dzień 4", link: "https://www.facebook.com/share/1BgXCrttuc/" },
@@ -139,11 +214,46 @@ const EVENTS = {
     { title: "FIVA World Motorcycle Rally 2026 – dzień 6", link: "https://fiva-wmr-2026.akhv.cz/" },
     { title: "III Miechowski Zlot Klasyków Miechów w PRL-u", link: "https://facebook.com/events/s/iii-miechowski-zlot-klasykow-m/1522105129027381/" },
   ],
+  "2026-06-26": [
+    { title: "Supercar Owners Circle x Classic Driver – dzień 1", link: "https://www.supercarownerscircle.com/about/events/" },
+    { title: "Aurora Concours – dzień 1", link: "https://www.theaurora.se/" },
+  ],
+  "2026-06-27": [
+    { title: "Supercar Owners Circle x Classic Driver – dzień 2", link: "https://www.supercarownerscircle.com/about/events/" },
+    { title: "Aurora Concours – dzień 2", link: "https://www.theaurora.se/" },
+  ],
+  "2026-06-28": [
+    { title: "Supercar Owners Circle x Classic Driver – dzień 3", link: "https://www.supercarownerscircle.com/about/events/" },
+    { title: "Aurora Concours – dzień 3", link: "https://www.theaurora.se/" },
+  ],
   "2026-07-02": [
     { title: "OSAKA - 10th Anniversary | Zlot Fanów Japońskiej Motoryzacji", link: "https://facebook.com/events/s/osaka-10th-anniversary-i-zlot-/783523851160423/" },
+    { title: "Le Mans Classic Legends – dzień 1", link: "https://www.facebook.com/events/705773982437140" },
+  ],
+  "2026-07-03": [
+    { title: "Le Mans Classic Legends – dzień 2", link: "https://www.facebook.com/events/705773982437140" },
+  ],
+  "2026-07-04": [
+    { title: "Le Mans Classic Legends – dzień 3", link: "https://www.facebook.com/events/705773982437140" },
+  ],
+  "2026-07-05": [
+    { title: "Le Mans Classic Legends – dzień 4", link: "https://www.facebook.com/events/705773982437140" },
+  ],
+  "2026-07-09": [
+    { title: "Goodwood Festival of Speed – dzień 1", link: "https://www.facebook.com/events/1260082418934107" },
+  ],
+  "2026-07-10": [
+    { title: "Goodwood Festival of Speed – dzień 2", link: "https://www.facebook.com/events/1260082418934107" },
+    { title: "British Classic Car Meeting St. Moritz – dzień 1", link: "https://www.bccm-stmoritz.ch/en/" },
   ],
   "2026-07-11": [
     { title: "DUB IT Tuning Festiwal 2k26", link: "https://www.facebook.com/DUB.IT.CK/?locale=pl_PL" },
+    { title: "Goodwood Festival of Speed – dzień 3", link: "https://www.facebook.com/events/1260082418934107" },
+    { title: "British Classic Car Meeting St. Moritz – dzień 2", link: "https://www.bccm-stmoritz.ch/en/" },
+  ],
+  "2026-07-12": [
+    { title: "Goodwood Festival of Speed – dzień 4", link: "https://www.facebook.com/events/1260082418934107" },
+    { title: "British Classic Car Meeting St. Moritz – dzień 3", link: "https://www.bccm-stmoritz.ch/en/" },
   ],
   "2026-07-22": [
     { title: "34. Ennstal-Classic – dzień 1", link: "https://www.facebook.com/951037973804467" },
@@ -178,6 +288,21 @@ const EVENTS = {
   "2026-08-21": [
     { title: "XI Zlot FSO", link: "https://facebook.com/events/s/xi-zlot-fso/2506523996398991/" },
   ],
+  "2026-08-29": [
+    { title: "Polski Rajd Legend – dzień 1", link: "http://prl.org.pl/" },
+  ],
+  "2026-08-30": [
+    { title: "Polski Rajd Legend – dzień 2", link: "http://prl.org.pl/" },
+  ],
+  "2026-09-11": [
+    { title: "Bernina GranTurismo – dzień 1", link: "https://www.facebook.com/berninagranturismo" },
+  ],
+  "2026-09-12": [
+    { title: "Bernina GranTurismo – dzień 2", link: "https://www.facebook.com/berninagranturismo" },
+  ],
+  "2026-09-13": [
+    { title: "Bernina GranTurismo – dzień 3", link: "https://www.facebook.com/berninagranturismo" },
+  ],
   "2026-09-18": [
     { title: "10. Jubileuszowa edycja Retro Motor Show – dzień 1", link: "https://facebook.com/events/s/10-jubileuszowa-edycja-retro-m/2490176171377135/" },
   ],
@@ -192,15 +317,40 @@ const EVENTS = {
     { title: "VIA ITALIA 2026", link: "https://facebook.com/events/s/via-italia-2026/1339090714621019/" },
     { title: "Street Dreams 2026", link: "https://facebook.com/813483028218717/" },
   ],
+  "2026-10-07": [
+    { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 1", link: "https://gpppz.pl/" },
+  ],
+  "2026-10-08": [
+    { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 2", link: "https://gpppz.pl/" },
+  ],
+  "2026-10-09": [
+    { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 3", link: "https://gpppz.pl/" },
+  ],
+  "2026-10-10": [
+    { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 4", link: "https://gpppz.pl/" },
+  ],
   "2026-10-11": [
     { title: "6. Hubertus Classic", link: "https://www.facebook.com/2436887856712691" },
     { title: "Ogólnopolski zlot PT Cruiser Bieszczady 2026 – dzień 1", link: "https://ptclub.pl/topic/14799-og%C3%B3lnopolski-zlot-pt-cruiser-bieszczady-2026/" },
+    { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 5", link: "https://gpppz.pl/" },
   ],
   "2026-10-12": [
     { title: "Ogólnopolski zlot PT Cruiser Bieszczady 2026 – dzień 2", link: "https://ptclub.pl/topic/14799-og%C3%B3lnopolski-zlot-pt-cruiser-bieszczady-2026/" },
   ],
   "2026-10-13": [
     { title: "Ogólnopolski zlot PT Cruiser Bieszczady 2026 – dzień 3", link: "https://ptclub.pl/topic/14799-og%C3%B3lnopolski-zlot-pt-cruiser-bieszczady-2026/" },
+  ],
+  "2026-10-22": [
+    { title: "Auto e Moto d’Epoca w Bolonii – dzień 1", link: "https://autoemotodepoca.com/" },
+  ],
+  "2026-10-23": [
+    { title: "Auto e Moto d’Epoca w Bolonii – dzień 2", link: "https://autoemotodepoca.com/" },
+  ],
+  "2026-10-24": [
+    { title: "Auto e Moto d’Epoca w Bolonii – dzień 3", link: "https://autoemotodepoca.com/" },
+  ],
+  "2026-10-25": [
+    { title: "Auto e Moto d’Epoca w Bolonii – dzień 4", link: "https://autoemotodepoca.com/" },
   ],
 };
 
