@@ -108,16 +108,16 @@ const EVENTS = {
   ],
   "2026-05-15": [
     { title: "Concorso d'Eleganza Villa d'Este – dzień 1", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
-    { title: "FuoriConcorso – dzień 1", link: "https://www.fuoriconcorso.org/" },
     { title: "XVI ZLOT AUT AMERYKAŃSKICH I ZABYTKOWYCH", link: "https://facebook.com/events/s/xvi-zlot-aut-amerykanskich-i-z/1532515697900973/" },
   ],
   "2026-05-16": [
     { title: "II runda Via Classic Cup", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "Concorso d'Eleganza Villa d'Este – dzień 2", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
-    { title: "FuoriConcorso – dzień 2", link: "https://www.fuoriconcorso.org/" },
+    { title: "FuoriConcorso – dzień 1", link: "https://www.fuoriconcorso.org/" },
   ],
   "2026-05-17": [
     { title: "Concorso d'Eleganza Villa d'Este – dzień 3", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
+    { title: "FuoriConcorso – dzień 2", link: "https://www.fuoriconcorso.org/" },
   ],
   "2026-05-19": [
     { title: "Autotechnika Expo 2026 – dzień 1", link: "https://facebook.com/events/s/autotechnika-expo-2026/1252814263064224/" },
@@ -319,20 +319,25 @@ const EVENTS = {
   ],
   "2026-10-07": [
     { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 1", link: "https://gpppz.pl/" },
+    { title: "ZOUTE GRAND PRIX CAR WEEK – dzień 1", link: "https://www.zoutegrandprix.be/en" },
   ],
   "2026-10-08": [
     { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 2", link: "https://gpppz.pl/" },
+    { title: "ZOUTE GRAND PRIX CAR WEEK – dzień 2", link: "https://www.zoutegrandprix.be/en" },
   ],
   "2026-10-09": [
     { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 3", link: "https://gpppz.pl/" },
+    { title: "ZOUTE GRAND PRIX CAR WEEK – dzień 3", link: "https://www.zoutegrandprix.be/en" },
   ],
   "2026-10-10": [
     { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 4", link: "https://gpppz.pl/" },
+    { title: "ZOUTE GRAND PRIX CAR WEEK – dzień 4", link: "https://www.zoutegrandprix.be/en" },
   ],
   "2026-10-11": [
     { title: "6. Hubertus Classic", link: "https://www.facebook.com/2436887856712691" },
     { title: "Ogólnopolski zlot PT Cruiser Bieszczady 2026 – dzień 1", link: "https://ptclub.pl/topic/14799-og%C3%B3lnopolski-zlot-pt-cruiser-bieszczady-2026/" },
     { title: "Grand Prix Polski Pojazdów Zabytkowych – dzień 5", link: "https://gpppz.pl/" },
+    { title: "ZOUTE GRAND PRIX CAR WEEK – dzień 5", link: "https://www.zoutegrandprix.be/en" },
   ],
   "2026-10-12": [
     { title: "Ogólnopolski zlot PT Cruiser Bieszczady 2026 – dzień 2", link: "https://ptclub.pl/topic/14799-og%C3%B3lnopolski-zlot-pt-cruiser-bieszczady-2026/" },
