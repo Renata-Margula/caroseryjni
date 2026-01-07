@@ -49,7 +49,7 @@ export default function ScrollImage({ src, alt, index, caption }) {
       <motion.img
         src={src}
         alt={alt}
-        className="w-full h-[40vh] sm:h-[50vh] md:h-[80vh] object-cover"
+        className="w-full h-[40vh] sm:h-[50vh] md:h-[80vh] rounded-xl object-cover"
         loading="lazy"
         initial={{ x: direction, opacity: 0, scale: 1.05 }}
         animate={controlsImage}
