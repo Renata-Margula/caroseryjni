@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EVENTS = {
+  "2026-01-17": [
+    { title: "Pelikan Team 14. Walimska Zimówka – dzień 1", link: "https://facebook.com/events/s/pelikan-team-14-walimska-zimow/1716813739035243/" },
+  ],
+  "2026-01-18": [
+    { title: "Pelikan Team 14. Walimska Zimówka – dzień 2", link: "https://facebook.com/events/s/pelikan-team-14-walimska-zimow/1716813739035243/" },
+  ],
+  "2026-01-25": [
+    { title: "Klasyki na 34 Finale WOŚP Wrocław - Fundacja Klasyczna Strefa Wrocław i Przyjaciele", link: "https://facebook.com/events/s/klasyki-na-34-finale-wosp-wroc/1243825684279538/" },
+  ],
   "2026-01-28": [
     { title: "Targi Rétromobile – dzień 1", link: "https://www.facebook.com/RetromobileOfficiel" },
   ],
@@ -23,6 +32,9 @@ const EVENTS = {
     { title: "Targi Rétromobile – dzień 5", link: "https://www.facebook.com/RetromobileOfficiel" },
     { title: "Bremen Classic Motorshow – dzień 3", link: "https://classicmotorshow.de/" },
   ],
+  "2026-02-14": [
+    { title: "Wrocławska Giełda Modeli Samochodowych 3! Edycja Walentynki", link: "https://facebook.com/events/s/wroc%C5%82awska-gie%C5%82da-modeli-samoc/2288256764984847/" },
+  ],
   "2026-02-19": [
     { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 1", link: "https://www.retro-classics.de/" },
   ],
@@ -30,11 +42,11 @@ const EVENTS = {
     { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 2", link: "https://www.retro-classics.de/" },
   ],
   "2026-02-21": [
-    { title: "KUSTOMHEAD 2026", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
+    { title: "KUSTOMHEAD 2026 – dzień 1", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
     { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 3", link: "https://www.retro-classics.de/" },
   ],
   "2026-02-22": [
-    { title: "KUSTOMHEAD 2026", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
+    { title: "KUSTOMHEAD 2026 – dzień 2", link: "https://facebook.com/events/s/kustomhead-2026-wystawa-zabytk/612633631500616/" },
     { title: "RETRO CLASSICS® MESSE STUTTGART – dzień 4", link: "https://www.retro-classics.de/" },
   ],
   "2026-03-07": [
@@ -114,6 +126,7 @@ const EVENTS = {
     { title: "II runda Via Classic Cup", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "Concorso d'Eleganza Villa d'Este – dzień 2", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
     { title: "FuoriConcorso – dzień 1", link: "https://www.fuoriconcorso.org/" },
+    { title: "BANZAI Car Event 2026 Łódź", link: "https://facebook.com/events/s/banzai-car-event-2026-%C5%82odz-ogr/2009463839840856/" },
   ],
   "2026-05-17": [
     { title: "Concorso d'Eleganza Villa d'Este – dzień 3", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
@@ -219,10 +232,12 @@ const EVENTS = {
     { title: "Aurora Concours – dzień 1", link: "https://www.theaurora.se/" },
   ],
   "2026-06-27": [
+    { title: "ULTRACE POLAND 2026 – dzień 1", link: "https://facebook.com/events/s/ultrace-poland-2026-eternal-cu/1898818380747841/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 2", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 2", link: "https://www.theaurora.se/" },
   ],
   "2026-06-28": [
+    { title: "ULTRACE POLAND 2026 – dzień 2", link: "https://facebook.com/events/s/ultrace-poland-2026-eternal-cu/1898818380747841/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 3", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 3", link: "https://www.theaurora.se/" },
   ],
@@ -263,27 +278,35 @@ const EVENTS = {
   ],
   "2026-07-24": [
     { title: "34. Ennstal-Classic – dzień 3", link: "https://www.facebook.com/951037973804467" },
+    { title: "JAPFEST 2026 TOR POZNAŃ – dzień 1", link: "https://facebook.com/events/s/japfest-2026-tor-poznan-13th-i/1360288055745793/" },
   ],
   "2026-07-25": [
     { title: "34. Ennstal-Classic – dzień 4", link: "https://www.facebook.com/951037973804467" },
+    { title: "JAPFEST 2026 TOR POZNAŃ – dzień 2", link: "https://facebook.com/events/s/japfest-2026-tor-poznan-13th-i/1360288055745793/" },
   ],
   "2026-07-26": [
     { title: "Wzlotowisko 2k26", link: "https://www.facebook.com/events/gniezno/wzlotowisko-2k26/4099196460336037/" },
+    { title: "JAPFEST 2026 TOR POZNAŃ – dzień 3", link: "https://facebook.com/events/s/japfest-2026-tor-poznan-13th-i/1360288055745793/" },
   ],
   "2026-08-01": [
     { title: "XVIII Zlot Zabytkowych Pojazdów – dzień 1", link: "https://www.miasteczko-galicyjskie.pl/?page_id=2903&fbclid=IwAR2i2JGC5xU6Q0yd7IbTsDcRy2XKbA6Gr6BW1nay5cwHi8JgshAxIqALpfM" },
+    { title: "CarsLovers Tuners Meeting – dzień 1", link: "https://facebook.com/events/s/carslovers-tuners-meeting-cl12/642548475526123/" },
   ],
   "2026-08-02": [
     { title: "XVIII Zlot Zabytkowych Pojazdów – dzień 2", link: "https://www.miasteczko-galicyjskie.pl/?page_id=2903&fbclid=IwAR2i2JGC5xU6Q0yd7IbTsDcRy2XKbA6Gr6BW1nay5cwHi8JgshAxIqALpfM" },
+    { title: "CarsLovers Tuners Meeting – dzień 1", link: "https://facebook.com/events/s/carslovers-tuners-meeting-cl12/642548475526123/" },
   ],
   "2026-08-07": [
     { title: "E36 Meeting Poland 2026 – dzień 1", link: "https://facebook.com/events/s/e36-meeting-poland-2026/1334826828010304/" },
+    { title: "POJECHANY ZLOT – dzień 1", link: "https://facebook.com/events/s/pojechany-zlot-2026/1192684306337899/" },
   ],
   "2026-08-08": [
     { title: "E36 Meeting Poland 2026 – dzień 2", link: "https://facebook.com/events/s/e36-meeting-poland-2026/1334826828010304/" },
+    { title: "POJECHANY ZLOT – dzień 2", link: "https://facebook.com/events/s/pojechany-zlot-2026/1192684306337899/" },
   ],
   "2026-08-09": [
     { title: "E36 Meeting Poland 2026 – dzień 3", link: "https://facebook.com/events/s/e36-meeting-poland-2026/1334826828010304/" },
+    { title: "POJECHANY ZLOT – dzień 3", link: "https://facebook.com/events/s/pojechany-zlot-2026/1192684306337899/" },
   ],
   "2026-08-21": [
     { title: "XI Zlot FSO", link: "https://facebook.com/events/s/xi-zlot-fso/2506523996398991/" },
