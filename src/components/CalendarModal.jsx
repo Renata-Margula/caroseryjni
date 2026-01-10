@@ -10,6 +10,7 @@ const EVENTS = {
   ],
   "2026-01-25": [
     { title: "Klasyki na 34 Finale WOŚP Wrocław - Fundacja Klasyczna Strefa Wrocław i Przyjaciele", link: "https://facebook.com/events/s/klasyki-na-34-finale-wosp-wroc/1243825684279538/" },
+    { title: "Klasyki na torze Poznań WOŚP 2026", link: "https://facebook.com/events/s/klasyki-na-torze-poznan-wosp-2/856719616728298/" },
   ],
   "2026-01-28": [
     { title: "Targi Rétromobile – dzień 1", link: "https://www.facebook.com/RetromobileOfficiel" },
@@ -132,8 +133,12 @@ const EVENTS = {
     { title: "Zalewiada Retro Zlot 2026", link: "https://facebook.com/events/s/zalewiada-retro-zlot-2026/843843574869581/" },
     { title: "VI RAJD POLONEZA – dzień 2", link: "https://facebook.com/events/s/vi-rajd-poloneza-2-3-maja-2026/1621288888545760/" },
   ],
+  "2026-05-09": [
+    { title: "IV Zlot Pojazdow Służb Mundurowych Zaniemyśl – dzień 1", link: "https://facebook.com/events/s/iv-zlot-pojazdow-s%C5%82uzb-munduro/1725707568430078/" },
+  ],
   "2026-05-10": [
     { title: "Retro Biesiada Wądroże Wielkie 2026", link: "https://facebook.com/events/s/retro-biesiada-wadroze-wielkie/1218419223514998/" },
+    { title: "IV Zlot Pojazdow Służb Mundurowych Zaniemyśl – dzień 2", link: "https://facebook.com/events/s/iv-zlot-pojazdow-s%C5%82uzb-munduro/1725707568430078/" },
   ],
   "2026-05-15": [
     { title: "Concorso d'Eleganza Villa d'Este – dzień 1", link: "https://concorsodeleganzavilladeste.com/blocks/home" },
@@ -217,6 +222,7 @@ const EVENTS = {
     { title: "Classica Mierzęcin – dzień 3", link: "https://www.facebook.com/share/1BgXCrttuc/" },
     { title: "Mille Miglia – dzień 5", link: "https://1000miglia.it/en/events/1000-miglia/1000-miglia-2026/" },
     { title: "1000 mil československých – dzień 4", link: "https://1000milceskoslovenskych.cz/" },
+    { title: "IV Rogoziński Zlot Motoryzacyjny", link: "https://facebook.com/events/s/iv-rogozinski-zlot-motoryzacyj/814334661643456/" },
   ],
   "2026-06-14": [
     { title: "Classica Mierzęcin – dzień 4", link: "https://www.facebook.com/share/1BgXCrttuc/" },
@@ -240,6 +246,7 @@ const EVENTS = {
   "2026-06-20": [
     { title: "Moto Summer 8 - FESTIVAL – dzień 2", link: "https://facebook.com/events/s/moto-summer-8-festival/1340168223807045/" },
     { title: "FIVA World Motorcycle Rally 2026 – dzień 5", link: "https://fiva-wmr-2026.akhv.cz/" },
+    { title: "CSG Automotive Event 2026", link: "https://facebook.com/events/s/csg-automotive-event-2026-even/1398389201746471/" },
   ],
   "2026-06-21": [
     { title: "Moto Summer 8 - FESTIVAL – dzień 3", link: "https://facebook.com/events/s/moto-summer-8-festival/1340168223807045/" },
@@ -255,11 +262,13 @@ const EVENTS = {
     { title: "ULTRACE POLAND 2026 – dzień 1", link: "https://facebook.com/events/s/ultrace-poland-2026-eternal-cu/1898818380747841/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 2", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 2", link: "https://www.theaurora.se/" },
+    { title: "Zlot Pojazdów Klasycznych I Zabytkowych Retro Show VII – dzień 1", link: "https://facebook.com/events/s/zlot-pojazdow-klasycznych-i-za/1152496260207123/" },
   ],
   "2026-06-28": [
     { title: "ULTRACE POLAND 2026 – dzień 2", link: "https://facebook.com/events/s/ultrace-poland-2026-eternal-cu/1898818380747841/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 3", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 3", link: "https://www.theaurora.se/" },
+    { title: "Zlot Pojazdów Klasycznych I Zabytkowych Retro Show VII – dzień 2", link: "https://facebook.com/events/s/zlot-pojazdow-klasycznych-i-za/1152496260207123/" },
   ],
   "2026-07-02": [
     { title: "OSAKA - 10th Anniversary | Zlot Fanów Japońskiej Motoryzacji", link: "https://facebook.com/events/s/osaka-10th-anniversary-i-zlot-/783523851160423/" },
@@ -280,15 +289,18 @@ const EVENTS = {
   "2026-07-10": [
     { title: "Goodwood Festival of Speed – dzień 2", link: "https://www.facebook.com/events/1260082418934107" },
     { title: "British Classic Car Meeting St. Moritz – dzień 1", link: "https://www.bccm-stmoritz.ch/en/" },
+    { title: "Zakręcone koła PRL - VOL. 2 – dzień 1", link: "https://facebook.com/events/s/zakrecone-ko%C5%82a-prl-vol-2/958631062996477/" },
   ],
   "2026-07-11": [
     { title: "DUB IT Tuning Festiwal 2k26", link: "https://www.facebook.com/DUB.IT.CK/?locale=pl_PL" },
     { title: "Goodwood Festival of Speed – dzień 3", link: "https://www.facebook.com/events/1260082418934107" },
     { title: "British Classic Car Meeting St. Moritz – dzień 2", link: "https://www.bccm-stmoritz.ch/en/" },
+    { title: "Zakręcone koła PRL - VOL. 2 – dzień 2", link: "https://facebook.com/events/s/zakrecone-ko%C5%82a-prl-vol-2/958631062996477/" },
   ],
   "2026-07-12": [
     { title: "Goodwood Festival of Speed – dzień 4", link: "https://www.facebook.com/events/1260082418934107" },
     { title: "British Classic Car Meeting St. Moritz – dzień 3", link: "https://www.bccm-stmoritz.ch/en/" },
+    { title: "Zakręcone koła PRL - VOL. 2 – dzień 3", link: "https://facebook.com/events/s/zakrecone-ko%C5%82a-prl-vol-2/958631062996477/" },
   ],
   "2026-07-22": [
     { title: "34. Ennstal-Classic – dzień 1", link: "https://www.facebook.com/951037973804467" },
