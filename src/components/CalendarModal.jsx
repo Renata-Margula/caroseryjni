@@ -279,9 +279,11 @@ const EVENTS = {
   ],
   "2026-07-04": [
     { title: "Le Mans Classic Legends – dzień 3", link: "https://www.facebook.com/events/705773982437140" },
+    { title: "Concours of Elegance Germany – dzień 1", link: "https://concoursofelegancegermany.com/" },
   ],
   "2026-07-05": [
     { title: "Le Mans Classic Legends – dzień 4", link: "https://www.facebook.com/events/705773982437140" },
+    { title: "Concours of Elegance Germany – dzień 2", link: "https://concoursofelegancegermany.com/" },
   ],
   "2026-07-09": [
     { title: "Goodwood Festival of Speed – dzień 1", link: "https://www.facebook.com/events/1260082418934107" },
