@@ -168,6 +168,7 @@ const EVENTS = {
   ],
   "2026-05-24": [
     { title: "Drift Girl Camp 2k26 – dzień 2", link: "https://facebook.com/events/s/drift-girl-camp-/1748992352722540/" },
+    { title: "Zlot Mercedes-Benz Gathering 140th Anniversary - Toruń 2026", link: "https://facebook.com/events/s/zlot-mercedes-benz-gathering-1/2121683435001750/" },
   ],
   "2026-05-28": [
     { title: "International Mini Meeting – dzień 1", link: "https://imm2026.pl/" },
@@ -303,6 +304,7 @@ const EVENTS = {
     { title: "Goodwood Festival of Speed – dzień 4", link: "https://www.facebook.com/events/1260082418934107" },
     { title: "British Classic Car Meeting St. Moritz – dzień 3", link: "https://www.bccm-stmoritz.ch/en/" },
     { title: "Zakręcone koła PRL - VOL. 2 – dzień 3", link: "https://facebook.com/events/s/zakrecone-ko%C5%82a-prl-vol-2/958631062996477/" },
+    { title: "WAKACJE KLASYCZNIE 2026 #RETROMOTORSPORT", link: "https://facebook.com/events/s/wakacje-klasycznie-2026-retrom/3731044073868519/" },
   ],
   "2026-07-22": [
     { title: "34. Ennstal-Classic – dzień 1", link: "https://www.facebook.com/951037973804467" },
@@ -356,6 +358,7 @@ const EVENTS = {
   ],
   "2026-08-29": [
     { title: "Polski Rajd Legend – dzień 1", link: "http://prl.org.pl/" },
+    { title: "VI Festiwal Pojazdów Nieznanych, Nieudanych i Zapomnianych", link: "https://facebook.com/events/s/vi-festiwal-pojazdow-nieznanyc/1156532899981879/" },
   ],
   "2026-08-30": [
     { title: "Polski Rajd Legend – dzień 2", link: "http://prl.org.pl/" },
@@ -371,13 +374,16 @@ const EVENTS = {
   ],
   "2026-09-18": [
     { title: "10. Jubileuszowa edycja Retro Motor Show – dzień 1", link: "https://facebook.com/events/s/10-jubileuszowa-edycja-retro-m/2490176171377135/" },
+    { title: "BALTICTREFFEN 6TH 2026 BY VOLKSTEAM – dzień 1", link: "https://facebook.com/events/s/baltictreffen-6th-2026-by-volk/1127098252867051/" }
   ],
   "2026-09-19": [
     { title: "III runda Via Classica Cup", link: "https://www.facebook.com/ViaPrestigeEurope/" },
     { title: "10. Jubileuszowa edycja Retro Motor Show – dzień 2", link: "https://facebook.com/events/s/10-jubileuszowa-edycja-retro-m/2490176171377135/" },
+    { title: "BALTICTREFFEN 6TH 2026 BY VOLKSTEAM – dzień 2", link: "https://facebook.com/events/s/baltictreffen-6th-2026-by-volk/1127098252867051/" }
   ],
   "2026-09-20": [
     { title: "10. Jubileuszowa edycja Retro Motor Show – dzień 3", link: "https://facebook.com/events/s/10-jubileuszowa-edycja-retro-m/2490176171377135/" },
+    { title: "BALTICTREFFEN 6TH 2026 BY VOLKSTEAM – dzień 3", link: "https://facebook.com/events/s/baltictreffen-6th-2026-by-volk/1127098252867051/" }
   ],
   "2026-09-05": [
     { title: "VIA ITALIA 2026", link: "https://facebook.com/events/s/via-italia-2026/1339090714621019/" },
