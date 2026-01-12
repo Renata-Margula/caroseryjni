@@ -255,11 +255,16 @@ const EVENTS = {
     { title: "III Miechowski Zlot Klasyków Miechów w PRL-u", link: "https://facebook.com/events/s/iii-miechowski-zlot-klasykow-m/1522105129027381/" },
     { title: "8. Zlot Klasyków w Kowarach", link: "https://facebook.com/events/s/8-zlot-klasykow-w-kowarach/855514190674218/" },
   ],
+  "2026-06-25": [
+    { title: "37th Coupe des Alpes 2026 – dzień 1", link: "https://www.rallystory.com/rallyes/coupe-des-alpes-2026/" },
+  ],
   "2026-06-26": [
+    { title: "37th Coupe des Alpes 2026 – dzień 2", link: "https://www.rallystory.com/rallyes/coupe-des-alpes-2026/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 1", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 1", link: "https://www.theaurora.se/" },
   ],
   "2026-06-27": [
+    { title: "37th Coupe des Alpes 2026 – dzień 3", link: "https://www.rallystory.com/rallyes/coupe-des-alpes-2026/" },
     { title: "ULTRACE POLAND 2026 – dzień 1", link: "https://facebook.com/events/s/ultrace-poland-2026-eternal-cu/1898818380747841/" },
     { title: "Supercar Owners Circle x Classic Driver – dzień 2", link: "https://www.supercarownerscircle.com/about/events/" },
     { title: "Aurora Concours – dzień 2", link: "https://www.theaurora.se/" },
